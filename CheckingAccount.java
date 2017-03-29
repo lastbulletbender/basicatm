@@ -1,14 +1,16 @@
 
 import java.util.*;
 
-public class CheckingAccount extends Account implements Functions{
+public class CheckingAccount extends Account{
 
   int minimumBalance = 50000;
+
+  //Constructor
   CheckingAccount(String accountNo,int balance){
     super(accountNo);
     this.balance = balance;
   }
-
+  //Overloaded Function checking for minimum Balance
   public void withdrawMoney(){
     System.out.print("Enter money : ");
     Scanner in = new Scanner(System.in);

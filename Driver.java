@@ -12,7 +12,7 @@ public class Driver{
       ch = 0;
       System.out.print("1.SAVINGS\n2.CHECKING\nENTER YOUR CHOICE : ");
       int chk = in.nextInt();
-      if(chk==1){
+      if(chk==1){   //Uses an object of the interface to set the reference
         fun = s1;}
         if(chk==2){
           fun = c1;}

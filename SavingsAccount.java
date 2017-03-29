@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class SavingsAccount extends Account implements Functions{
+public class SavingsAccount extends Account{
 	int balance;
 	int withdrawLimit=0;
 
@@ -9,7 +9,7 @@ public class SavingsAccount extends Account implements Functions{
 		this.balance = balance;
 		this.withdrawLimit = withdrawLimit;
 	}
-
+	//Overloaded withdrawMoney to check for withdraw Limit
 	public void withdrawMoney(){
 		System.out.print("Enter money : ");
 		Scanner in = new Scanner(System.in);
