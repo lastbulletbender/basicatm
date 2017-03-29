@@ -1,12 +1,10 @@
 import java.util.*;
 
 public class SavingsAccount extends Account{
-	int balance;
-	int withdrawLimit=0;
+		int withdrawLimit=0;
 
 	SavingsAccount(String accountNo,int balance){
-		super(accountNo);
-		this.balance = balance;
+		super(accountNo,balance);
 		this.withdrawLimit = withdrawLimit;
 	}
 	//Overloaded withdrawMoney to check for withdraw Limit
@@ -17,15 +15,20 @@ public class SavingsAccount extends Account{
 		if(money>balance){
 			System.out.println("Insufficient Balance");
 		}
+		else if(money%500!=0){
+				System.out.println("Enter in multiples of 500");
+				withdrawMoney();
+			}
 		else
 		{
 			if(withdrawLimit > 2){
-				balance-=20;
-			}
+				balance-=20;}
+
+
 
 			balance-=money;
 			System.out.println("Please take your cash.");
 			System.out.println("Available Balance : " + balance);
-			withdrawLimit++;
-		}
+			withdrawLimit++;}
+		
 	}}
